@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can go here */
+body {
+  @apply antialiased;
+}
+
+/* You can add more custom utilities using @layer */
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
