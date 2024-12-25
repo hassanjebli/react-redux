@@ -1,16 +1,23 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Home } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
+import { Home, Layout, ShoppingCart, ListTodo } from 'lucide-react';
 
 const Navbar = () => {
-  const navItems = [{ path: '/', label: 'Home', icon: Home }];
+  const navItems = [
+    { path: '/', label: 'Home', icon: Home },
+    { path: '/counter', label: 'Counter', icon: Layout },
+    { path: '/products', label: 'Products', icon: ShoppingCart },
+    { path: '/todolist', label: 'Todo List', icon: ListTodo },
+  ];
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold text-indigo-600">MyApp</span>
+            <Link to={'/'} className="text-xl font-bold text-indigo-600">
+              MyApp
+            </Link>
           </div>
 
           {/* Navigation Links */}
