@@ -8,6 +8,7 @@ import Products from './pages/products/Products';
 import TodoList from './pages/todolist/TodoList';
 import Users from './pages/users/Users';
 import NotFound from "./components/layout/NotFound"
+import ProductDetails from './pages/products/ProductDetails';
 
 function App() {
   return (
@@ -16,11 +17,12 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="counter" element={<Counter />} />
-            <Route path="products" element={<Products />} />
-            <Route path="todolist" element={<TodoList />} />
-            <Route path="users" element={<Users />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/todolist" element={<TodoList />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

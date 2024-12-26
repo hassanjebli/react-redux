@@ -7,12 +7,17 @@ const Counter = () => {
   const { counter } = useSelector((state) => state.counterReducer);
   const dispatch = useDispatch();
   const [value, setValue] = useState(0);
+  const { products } = useSelector((state) => state.productReducer);
+  console.log(products);
+  
 
   return (
     <div className="flex flex-col items-center space-y-8 p-8">
       <div className="w-full max-w-md bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Interactive Counter</h2>
-        
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          Interactive Counter
+        </h2>
+
         {/* Counter Display */}
         <div className="relative mb-8">
           <div className="absolute inset-0 bg-blue-100 rounded-lg transform -rotate-2"></div>

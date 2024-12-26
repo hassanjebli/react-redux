@@ -1,10 +1,10 @@
-import { ACTIONS } from './types';
+import { COUNTER_ACTIONS } from './types';
 
 export const increment = (value) => ({
-  type: ACTIONS.INCREMENT,
+  type: COUNTER_ACTIONS.INCREMENT,
   payload: { value },
 });
 export const decrement = (value) => ({
-  type: ACTIONS.DECREMENT,
+  type: COUNTER_ACTIONS.DECREMENT,
   payload: { value },
 });

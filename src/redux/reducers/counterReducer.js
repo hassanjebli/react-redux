@@ -1,12 +1,12 @@
-import { ACTIONS } from '../actions/types';
+import { COUNTER_ACTIONS } from '../actions/types';
 
 export const counterReducer = (state = { counter: 0 }, { type, payload }) => {
   switch (type) {
-    case ACTIONS.INCREMENT:
+    case COUNTER_ACTIONS.INCREMENT:
       return {
         counter: state.counter + payload.value,
       };
-    case ACTIONS.DECREMENT:
+    case COUNTER_ACTIONS.DECREMENT:
       return {
         counter:
           state.counter > 0 && state.counter - payload.value >= 0
